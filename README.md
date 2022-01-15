@@ -6,7 +6,7 @@ Helm's [documentation](https://helm.sh/docs) to get started.
 Once Helm has been set up correctly, add the repo as follows:
 
 ```bash
-helm repo add laravel-helm-chart https://nmrxiv.github.io/laravel-helm-chart
+helm repo add laravel-helm-chart https://unisofta.github.io/laravel-helm-chart
 ```
 
 If you had already added this repo earlier, run `helm repo update` to retrieve the latest versions of the packages.   
