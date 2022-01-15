@@ -1,7 +1,7 @@
 apiVersion: v2
-name: vibspecdb
+name: nmrxiv
 description: A Helm chart of Vibspec-Laravel Application for K8S
-home: https://vibspecdb.k8s.photonicdata.science
+home: https://repo.nmrxiv.org
 maintainers:
   - name: Stefaniuk Nazar
     email: stefaniuk.nazar@gmail.com
@@ -18,7 +18,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.2.9
+version: 0.2.5
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to

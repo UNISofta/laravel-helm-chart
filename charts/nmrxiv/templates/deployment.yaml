@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "vibspecdb.fullname" . }}
+  name: {{ include "nmrxiv.fullname" . }}
   labels:
-    {{- include "vibspecdb.labels" . | nindent 4 }}
+    {{- include "nmrxiv.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "vibspecdb.selectorLabels" . | nindent 6 }}
+      {{- include "nmrxiv.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "vibspecdb.selectorLabels" . | nindent 8 }}
+        {{- include "nmrxiv.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "vibspecdb.serviceAccountName" . }}
+      serviceAccountName: {{ include "nmrxiv.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       {{- if .Values.persistence.enabled }}
@@ -74,7 +74,7 @@ spec:
         {{- if .Values.persistence.enabled }}
         - name: storage
           persistentVolumeClaim:
-            claimName: {{ .Values.persistence.existingClaim | default (printf "%s-storage" (include "vibspecdb.fullname" .)) }}
+            claimName: {{ .Values.persistence.existingClaim | default (printf "%s-storage" (include "nmrxiv.fullname" .)) }}
         {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:

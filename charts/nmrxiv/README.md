@@ -1,1 +1,1 @@
-vibspecdb
+nmrxiv

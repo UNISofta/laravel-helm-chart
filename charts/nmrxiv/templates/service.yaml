@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "vibspecdb.fullname" . }}
+  name: {{ include "nmrxiv.fullname" . }}
   labels:
-    {{- include "vibspecdb.labels" . | nindent 4 }}
+    {{- include "nmrxiv.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "vibspecdb.selectorLabels" . | nindent 4 }}
+    {{- include "nmrxiv.selectorLabels" . | nindent 4 }}
