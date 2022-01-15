@@ -1,5 +1,37 @@
 apiVersion: v1
 entries:
+  nmrxiv:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-01-15T14:31:29.677671176Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.13.11
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.6.3
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.24.12
+    - condition: meilisearch.enabled
+      name: meilisearch
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.1.22
+    description: A Helm chart of Vibspec-Laravel Application for K8S
+    digest: 54f1a056d8b4f504eb6d7218b8ad8fdec2a456cb6ef2a11ef41e9bbc9b68ecc6
+    home: https://repo.nmrxiv.org
+    maintainers:
+    - email: stefaniuk.nazar@gmail.com
+      name: Stefaniuk Nazar
+    name: nmrxiv
+    type: application
+    urls:
+    - https://github.com/UNISofta/laravel-helm-chart/releases/download/nmrxiv-0.2.4/nmrxiv-0.2.4.tgz
+    version: 0.2.4
   vibspecdb:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -32,4 +64,4 @@ entries:
     urls:
     - https://github.com/nmrxiv/laravel-helm-chart/releases/download/vibspecdb-0.2.3/vibspecdb-0.2.3.tgz
     version: 0.2.3
-generated: "2022-01-15T13:44:41.638694973Z"
+generated: "2022-01-15T14:31:29.677685277Z"
