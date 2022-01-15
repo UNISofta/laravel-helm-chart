@@ -8,8 +8,8 @@ data:
   APP_ENV: "production"
   APP_DEBUG: "true"
   APP_PORT: "443"
-  APP_URL: "https://vibspecdb.k8s.photonicdata.science/"
-  ASSET_URL: "https://vibspecdb.k8s.photonicdata.science/"
+  APP_URL: "https://repo.nmrxiv.org/"
+  ASSET_URL: "https://repo.nmrxiv.org/"
   LOG_CHANNEL: "stdout"
   DB_USERNAME: {{ .Values.postgresql.postgresqlUsername }}
   DB_CONNECTION: "pgsql"
@@ -40,7 +40,7 @@ data:
   MAIL_PORT: "{{ .Values.smtp.port }}"
   MAIL_ENCRYPTION: "null"
   MAIL_FROM_ADDRESS: {{ .Values.smtp.from }}
-  MAIL_FROM_NAME: "VibspecDB"
+  MAIL_FROM_NAME: "nmrxiv"
   AWS_DEFAULT_REGION: "us-east-1"
   AWS_BUCKET: "null"
   AWS_ENDPOINT: {{ .Values.minio.endpoint }}
