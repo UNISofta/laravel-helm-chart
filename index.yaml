@@ -66,6 +66,37 @@ entries:
   vibspecdb:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2022-01-15T21:07:51.935506607Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.13.11
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.6.3
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.24.12
+    - condition: meilisearch.enabled
+      name: meilisearch
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.1.22
+    description: A Helm chart of Vibspec-Laravel Application for K8S
+    digest: 9c19b4bfff8b9e4ad506f03369b63fc0ace1f338147891bbf6009200fda0cda4
+    home: https://vibspecdb.k8s.photonicdata.science
+    maintainers:
+    - email: stefaniuk.nazar@gmail.com
+      name: Stefaniuk Nazar
+    name: vibspecdb
+    type: application
+    urls:
+    - https://github.com/UNISofta/laravel-helm-chart/releases/download/vibspecdb-0.2.6/vibspecdb-0.2.6.tgz
+    version: 0.2.6
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2022-01-15T20:48:27.173867129Z"
     dependencies:
     - condition: postgresql.enabled
@@ -157,4 +188,4 @@ entries:
     urls:
     - https://github.com/nmrxiv/laravel-helm-chart/releases/download/vibspecdb-0.2.3/vibspecdb-0.2.3.tgz
     version: 0.2.3
-generated: "2022-01-15T20:48:27.173886929Z"
+generated: "2022-01-15T21:07:51.935532708Z"
