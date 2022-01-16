@@ -7,7 +7,7 @@ data:
   APP_NAME: {{ .Values.name }}
   APP_ENV: "production"
   APP_DEBUG: "true"
-  APP_PORT: "443"
+  APP_PORT: "80"
   APP_URL: "https://vibspecdb.k8s.photonicdata.science/"
   ASSET_URL: "https://vibspecdb.k8s.photonicdata.science/"
   LOG_CHANNEL: "stdout"
