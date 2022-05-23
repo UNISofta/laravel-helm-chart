@@ -1,0 +1,7 @@
+FlaskAppImage: docker.photonicdata.science/flaskImage-dockertemplate:latest # Choose the image
+AppURL: YOUR_PREFIX.k8s.photonicdata.science # Choose the URL to serve from
+DockerSecret: pds-registry
+ingress:
+  enabled: true
+env:
+  FOO: "BAR"

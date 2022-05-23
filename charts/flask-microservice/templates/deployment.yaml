@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: {{ .Release.Name }}-deployment
+    labels:
+      app: {{ .Release.Name }}
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - image: {{ .Values.FlaskAppImage | quote }}
+          name: {{ .Release.Name }}-flaskapp
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}-configmap
+      {{- if .Values.DockerSecret }}
+      imagePullSecrets:
+        - name: {{ .Values.DockerSecret }}
+      {{- end }}
+      restartPolicy: Always
